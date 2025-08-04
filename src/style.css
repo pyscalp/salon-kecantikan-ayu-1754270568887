@@ -1,0 +1,150 @@
+/* Variables */
+:root {
+  --primary-color: #F28B82; /* Coral Pink - vibrant & inviting */
+  --secondary-color: #F5F5DC; /* Beige - calming & sophisticated */
+  --accent-color: #A0522D; /* Sienna - earthy & luxurious */
+  --text-color: #333;
+  --light-text-color: #666;
+  --font-family: 'Poppins', sans-serif; /* Modern & legible */
+  --breakpoint-mobile: 768px;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+@media (min-width: var(--breakpoint-mobile)) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.service {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.whatsapp-button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Testimonials (Example) */
+.testimonials {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+  margin-bottom: 15px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .service {
+    grid-column: 1 / span 1; /* Take full width on small screens */
+  }
+}
+
+/* Smooth Animations (Example - add more as needed) */
+.service {
+  transition: transform 0.3s ease;
+}
+.service:hover {
+  transform: translateY(-5px);
+}
+
+
+/*  Add more specific styles as needed for different sections (e.g., about us, services, contact) */
